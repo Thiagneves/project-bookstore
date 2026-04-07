@@ -1,0 +1,121 @@
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background: rgb(125, 136, 255);
+}
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-wrapper .title-slide {
+    color: #835ea9;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link-active {
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: rgb(117, 117, 222);
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+    color: rgb(117, 117, 222);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: rgb(232, 232, 255);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .badge.developer {
+    color: #835ea9;
+    background: #f3e6ff;
+}
+
+.card-list .card-link .badge.aventura {
+    color: #5e72a9;
+    background: #ccdaff;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: black;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 40px;
+    width: 40px;
+    color: rgb(117, 117, 222);
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid rgb(117, 117, 222);
+    transform: rotate(-45deg);
+    transition: 0.5s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: white;
+    background: rgb(117, 117, 222);
+}
+
+.card-wrapper .swiper-paginarion-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: rgb(117, 117, 222);
+}
+
+.card-wrapper .swiper-paginarion-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .suiper-slide-button {
+    color: #835ea9;
+    margin-top: -35px;
+}
+
+
+
+/*RESPONSIVIDADE*/
+@media(max-width: 767px){
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .suiper-slide-button {
+        display: none;
+    }   
+}
