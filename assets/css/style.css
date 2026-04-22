@@ -7,44 +7,48 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
+h1 {
     font-size: 0;
     padding: 0;
     box-sizing: border-box;
     color: #222;
 }
 
-h2{
+h2 {
     font-size: 50px;
     line-height: 64px;
     color: #222;
 }
 
-h4{
+h4 {
     font-size: 20px;
     color: #222;
 }
 
-h6{
+h6 {
     font-weight: 700;
     font-size: 12px;
 }
 
-p{
+p {
     font-size: 16px;
     color: #46555b;
     margin: 15px 0 20px 0;
 }
 
-.section-p1{
+.section-p1 {
     padding: 40px 80px;
 }
 
-.section-m1{
+.section-m1 {
     margin: 40px 0;
 }
 
-button.normal{
+/*Botões --------------------------------------- */
+/*Definimos no class se é preto (normal) ou branco (white)*/
+
+
+button.normal {
     font-size: 14px;
     font-weight: 600;
     padding: 15px 30px;
@@ -57,7 +61,19 @@ button.normal{
     transition: 0.2s;
 }
 
-body{
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #FFF;;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #FFF;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
     width: 100%;
 }
 
@@ -87,13 +103,13 @@ body{
     justify-content: center;
 }
 
-.navbar li{
+.navbar li {
     list-style: none;
     padding: 0 20px;
     position: relative;
 }
 
-.navbar li a{
+.navbar li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -102,12 +118,12 @@ body{
 }
 
 .navbar li a:hover,
-.navbar li a.active{
+.navbar li a.active {
     color: #677fe0;
 }
 
 .navbar li a.active::after,
-.navbar li a:hover::after{
+.navbar li a:hover::after {
     content: "";
     width: 30%;
     height: 2px;
@@ -117,18 +133,18 @@ body{
     left: 20px;
 }
 
-#product1{
+#product1 {
     text-align: center;
 }
 
-#product1 .pro-container{
+#product1 .pro-container {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
     flex-wrap: wrap;
 }
 
-#product1 .pro{
+#product1 .pro {
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
@@ -140,44 +156,44 @@ body{
     position: relative;
 }
 
-#product1 .pro:hover{
+#product1 .pro:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.12);
 }
 
-#product1 .pro img{
+#product1 .pro img {
     width: 100%;
     border-radius: 20px;
 }
 
-#product1 .pro .des{
+#product1 .pro .des {
     text-align: start;
     padding: 10px 0;
 }
 
-#product1 .pro .des span{
+#product1 .pro .des span {
     color: #606063;
     font-size: 12px;
 }
 
-#product1 .pro .des h5{
+#product1 .pro .des h5 {
     padding-top: 4px;
     color: #1A1A1A;
     font-size: 18px;
 }
 
-#product1 .pro .des i{
+#product1 .pro .des i {
     font-size: 12px;
     color: rgba(243, 181, 25);
 }
 
-#product1 .pro .des h4{
+#product1 .pro .des h4 {
     padding-top: 4px;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
 }
 
-#product1 .pro .cart{
+#product1 .pro .cart {
     width: 40px;
     height: 40px;
     line-height: 40px;
@@ -191,7 +207,7 @@ body{
     right: 10px;
 }
 
-#banner{
+#banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,7 +220,7 @@ body{
     background-position: center;
 }
 
-#banner h4{
+#banner h4 {
     color: #1A1A1A;
     font-size: 16px;
 }
@@ -215,14 +231,153 @@ body{
     padding: 10px 0;
 }
 
-#banner h2 span{
+#banner h2 span {
     color: #EF3636;
 
 }
 
-#banner button:hover{
+/*Botão promoção centro --------------------------------------- */
+
+/*#banner button:hover {
     background-color: #677fe0;
     color: #FFF;
+}*/
+
+#banner .button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00a2ff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(/assets/img/home/promo01-header.png);
+    width: 49%;
+    height: 370px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+
+#sm-banner .banner-box2 {
+    background-image: url(/assets/img/home/promo02-header.png);
+}
+
+#sm-banner h4 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2 {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+/*Botão das ofertas --------------------------------------- */
+
+#sm-banner .banner-box:hover button {
+    background: #088178;
+    border: 1px solid #088178;
+}
+
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+    transition: padding-left 0.5s;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(/assets/img/home/promo03-terror.png);
+    min-width: 30%;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2 {
+    background-image: url(/assets/img/home/promo04-aventura.png);
+}
+
+#banner3 .banner-box3 {
+    background-image: url(/assets/img/home/promo05-estudos.png);
+}
+
+#banner3 h2 {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: -15px;
+
+    text-transform: uppercase;
+    background: linear-gradient(to right, #EF3636, #FFF, #FFF, #EF3636);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+#banner3 .banner-box2 h2{
+    background: linear-gradient(to right, #00a2ff, #FFF, #FFF, #00a2ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+#banner3 .banner-box3 h2{
+    background: linear-gradient(to right, #bb00ff, #FFF, #FFF, #bb00ff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+#banner3 h3 {
+    color: #FFF;
+    font-weight: 900;
+    font-size: 18px;
 }
 
 
